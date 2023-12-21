@@ -15,6 +15,7 @@ flutter pub run build_runner watch
 致谢
 API：  鸿洋提供的 WanAndroid API
 https://github.com/suming77/SumTea_Android 大佬提供的ui
+https://gitee.com/TTGF/bloc_demo 感谢大佬提供框架
 
 主要使用的开源框架:
  pub-add.ps1中都有
