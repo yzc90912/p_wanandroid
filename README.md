@@ -9,6 +9,14 @@ flutter packages pub run build_runner build --delete-conflicting-outputs
 // 该命令监听输入，可以实时编译最新的代码，不用每次修改之后重复使用 build 了
 flutter pub run build_runner watch
 
+注意事项
+本项目API均来源于WanAndroid，禁止商用。
 
+致谢
+API：  鸿洋提供的 WanAndroid API
+https://github.com/suming77/SumTea_Android 大佬提供的ui
+
+主要使用的开源框架:
+ pub-add.ps1中都有
 
 
