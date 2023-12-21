@@ -128,7 +128,7 @@ class _MinePageState extends BasePageState<MinePage> {
                     Text(
                         state.userEntity?.nickname ??
                             state.userEntity?.username ??
-                            "",
+                            "未登录",
                         style: TextStyle(
                             fontSize: 18.sp,
                             color: Colors.black,

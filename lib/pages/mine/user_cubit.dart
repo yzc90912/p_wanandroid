@@ -9,7 +9,7 @@ class UserCubit extends Cubit<UserState> {
   UserCubit() : super(UserState().init());
 
   void getUserInfo() {
-    if (MMKV.defaultMMKV().decodeString(Constants.user)!.isNotEmpty) {
+    if (MMKV.defaultMMKV().decodeString(Constants.user) != null) {
       emit(UserState()
         ..isLogin = true
         ..userEntity = userEntityFromJson(
@@ -21,10 +21,13 @@ class UserCubit extends Cubit<UserState> {
     }
   }
 
-  void updateUserInfo(UserEntity userEntity) {
-    MMKV
-        .defaultMMKV()
-        .encodeString(Constants.user, userEntityToJson(userEntity));
+  UserEntity? getUser() {
+    return state.userEntity;
+  }
+
+  void updateUserInfo(UserEntity? userEntity) {
+    MMKV.defaultMMKV().encodeString(
+        Constants.user, userEntityToJson(userEntity ?? const UserEntity()));
     emit(UserState()..userEntity = userEntity);
   }
 }

@@ -41,4 +41,11 @@ abstract class WanService {
     @Field("username") String username,
     @Field("password") String password,
   );
+
+  /// 登出
+  /// @param username  用户名
+  /// @param password  密码
+  /// @param repassword  确认密码
+  @GET("/user/logout/json")
+  Future<ApiResponse<dynamic>> logout();
 }
